@@ -11,14 +11,24 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
   - LED
   - LCD
   - Buzzer
+  - KeyPad
   - 7 Segment
   - Push Button
-  - KeyPad
 - MCAL
   - DIO
   - Interrupt
 
-## Common Folder
-- MCU File
-- Macros File
-- STD_Types File
+## Common Files
+- `MCU.h` File
+- `Macros.h` File
+- `STD_Types.h` File
+
+<hr>
+
+## Use This Link To Clone My Repo :
+   ```
+  https://github.com/Azklany/AVR-ATmega32-Drivers.git
+  ```
+<hr>
+
+All rights reserved © 2023 to [Azklany](https://github.com/Azklany).
