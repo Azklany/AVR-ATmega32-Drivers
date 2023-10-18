@@ -23,13 +23,20 @@
 #define Pin_High 1
 #define Pin_Low 0
 
+#define Enable 1
+#define Disable 0
+
 #define SREG_Pin 7
 #define GICR_Pin 6
 #define MCUCR_Pin 1
 
+enum{Sreg,Gicr,Mcucr,Mcucsr};
+
 STD_Type MCAL_Interrupt_u8SetRegister(u8, u8);
 STD_Type MCAL_Interrupt_u8SetRegisterPin(u8, u8 ,u8 );
 void MCAL_Interrupt_EXIT_CallBack(void (*ptr)(void));
+void MCAL_Interrupt_InterruptInit();
+void MCAL_Interrupt_EnableGIE(u8);
 
 
 #endif /* MCAL_INTERRUPT_INTERRUPT_H_ */

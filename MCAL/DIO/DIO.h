@@ -25,9 +25,10 @@
 enum {
 	PortA, PortB, PortC, PortD
 };
-enum {
-	E_OK, E_NOT_OK
-};
+
+//enum {
+//	E_OK, E_NOT_OK
+//};
 
 //enum {
 //	Port_Low, Port_High

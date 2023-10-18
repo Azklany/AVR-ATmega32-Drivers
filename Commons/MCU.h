@@ -25,9 +25,19 @@
 #define PINC (*(volatile u8*)0x33)
 #define PIND (*(volatile u8*)0x30)
 
+//interrupt
 #define SREG (*(volatile u8*)0x5F)
 #define GICR (*(volatile u8*)0x5B)
+#define GIFR (*(volatile u8*)0x5A)
 #define MCUCR (*(volatile u8*)0x55)
+#define MCUCSR (*(volatile u8*)0x54)
+
+//ADC
+#define ADMUX (*(volatile u8*)0x27)
+#define ADCSRA (*(volatile u8*)0x26)
+#define ACDH (*(volatile u8*)0x25)
+#define ACDL (*(volatile u8*)0x24)
+#define SFIOR (*(volatile u8*)0x50)
 
 //#define GIE (*(volatile u8*)0x5f)
 
