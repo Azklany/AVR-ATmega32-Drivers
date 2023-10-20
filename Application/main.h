@@ -17,5 +17,9 @@
 #include "Ping Pong/Ping_Pong.h"
 #include "Traffic Light/Traffic_Light.h"
 #include "ADC Test/Pot_Test.h"
+#include "Timer0 NormalMode Test/T0_NM_Test.h"
+#include "Timer0 CTCMode Test/T0_CTC_Test.h"
+#include "LED BLink by Timer/Led_Blink.h"
+#include "LED Brightness Control/Led_BC.h"
 
 #endif /* APPLICATION_MAIN_H_ */

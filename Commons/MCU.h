@@ -39,6 +39,13 @@
 #define ACDL (*(volatile u8*)0x24)
 #define SFIOR (*(volatile u8*)0x50)
 
+//Timer0
+#define TIMSK (*(volatile u8*)0x59)
+#define OCR0 (*(volatile u8*)0x5c)
+#define TCCR0 (*(volatile u8*)0x53)
+#define TCNT0 (*(volatile u8*)0x52)
+
+
 //#define GIE (*(volatile u8*)0x5f)
 
 

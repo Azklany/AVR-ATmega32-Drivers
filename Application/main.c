@@ -8,9 +8,8 @@
 #include "main.h"
 //#include <avr/interrupt.h>
 
-
 //volatile u16 x;
-volatile u16 counter;
+//volatile u16 counter;
 
 //void LEDON();
 
@@ -26,12 +25,12 @@ void main(void) {
 //	APP_CustomChar_u8CustomCharAPP();
 	//////////////////////////////////////////////////
 
-//	                    intrrupt
-	APP_InterruptTest_u8InterruptTestInit();
-	APP_InterruptTest_u8InterruptTestAPP();
-	while(1){
+//	                    interrupt
+//	APP_InterruptTest_u8InterruptTestInit();
+//	APP_InterruptTest_u8InterruptTestAPP();
+//	while(1){
 //
-	}
+//	}
 	//////////////////////////////////////////////////
 
 	//          KeyPad
@@ -46,32 +45,16 @@ void main(void) {
 
 	//////////////////////////////////////////////////
 //	  Timer Normal
-//	TCCR0 = 0b00000101;
-//	TIMSK = 0b00000001;
-//	MCAL_Interrupt_u8SetRegisterPin(SREG,7,1)
-//	TCNT0 = 247;
-//	HAL_LED_u8LedInit(3, 3);
-//	while (1) {
-//		if (counter == 62) {
-//			HAL_LED_u8LedMode(3, 3, 2);
-//			TCNT0 = 247;
-//			counter = 0;
-//		}
-//	}
+//	APP_Timer0_NMTest_u8NMTestInit();
+//	APP_Timer0_NMTest_u8NMTestAPP();
+
 	//	  Timer CTC
-//	TCCR0 = 0b00001011;
-//	TIMSK = 0b00000010;
-//	MCAL_Interrupt_u8SetRegisterPin(SREG, 7, 1);
-//	HAL_LED_u8LedInit(3, 3);
-//	OCR0 = 199;
-//	while (1) {
-//		if (counter == 1250) {
-//			HAL_LED_u8LedMode(3, 3, 2);
-//			counter = 0;
-//		}
-//	}
+//	APP_Timer0_CTCTest_u8CTCTestInit();
+//	APP_Timer0_CTCTest_u8CTCTestAPP();
 
 	// Fast
+	APP_Timer0_u8LedBCInit();
+	APP_Timer0_u8LedBCAPP();
 //	TCCR0 = 0b01001011;
 //	TIMSK = 0b00000010;
 //	MCAL_Interrupt_u8SetRegisterPin(SREG, 7, 1);
@@ -85,6 +68,10 @@ void main(void) {
 //		}
 //	}
 
+//////////////////////////////////////////////
+	//Led Blink
+//	APP_Timer0_u8LedBlinkInit();
+//	APP_Timer0_u8LedBlinkAPP();
 	///////////////////////////////////
 //		if (Loc_u8Return_Value == E_NOT_OK) {
 //			HAL_Buzzer_u8BuzzerInit(PortA, 3);
