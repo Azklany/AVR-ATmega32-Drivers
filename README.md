@@ -14,8 +14,11 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
   - KeyPad
   - 7 Segment
   - Push Button
+  - Potentiometer
 - MCAL
   - DIO
+  - ADC
+  - Timer0
   - Interrupt
 
 ## Common Files
