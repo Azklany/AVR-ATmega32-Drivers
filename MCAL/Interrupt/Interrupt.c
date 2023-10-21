@@ -98,7 +98,7 @@ void MCAL_Interrupt_InterruptInit() {
 	MCAL_Interrupt_u8SetRegisterPin(Mcucr, MCUCR_Pin, Pin_High);
 }
 
-ISR(VECT_INT0) {
-	if (Gptr != '\0')
-		Gptr();
-}
+//ISR(VECT_INT0) {
+//	if (Gptr != '\0')
+//		Gptr();
+//}

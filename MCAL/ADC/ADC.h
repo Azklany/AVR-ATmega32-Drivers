@@ -11,8 +11,9 @@
 #include "../../Commons/MCU.h"
 #include "../../Commons/Macros.h"
 #include "../../Commons/STD_Types.h"
-#include "../Interrupt/Interrupt.h"
 
+#define ISR( vectNum ) void vectNum (void)__attribute__((signal));\
+										void vectNum (void)
 #define ADC (*(volatile u16*)((0x04) + 0x20))
 
 #define ADC_vect __vector_16
@@ -35,7 +36,9 @@
 #define Adc_6 6
 #define Adc_7 7
 
-enum{Admux,Adcsra,Sfior};
+enum {
+	Admux, Adcsra, Sfior
+};
 
 #define ADUMX_Value_Adc0 0b01000000
 #define ADUMX_Value_Adc1 0b01000001

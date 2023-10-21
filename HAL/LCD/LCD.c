@@ -59,6 +59,12 @@ STD_Type HAL_LCD_u8SendString(u8* Loc_u8LCD_String) {
 	}
 }
 
+STD_Type HAL_LCD_u8SendNumber(u16 Loc_u8LCD_Number) {
+	u8 str[10];
+	itoa(Loc_u8LCD_Number, str, 10);
+	HAL_LCD_u8SendString(str);
+}
+
 STD_Type HAL_LCD_u8GoTo(u8 Loc_u8TypeOfShift, u8 Loc_u8NumOfShift) {
 	if (Loc_u8TypeOfShift == Right_Shift) {
 		for (u32 count = 0; count < Loc_u8NumOfShift; count++) {

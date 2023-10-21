@@ -21,5 +21,6 @@
 #include "Timer0 CTCMode Test/T0_CTC_Test.h"
 #include "LED BLink by Timer/Led_Blink.h"
 #include "LED Brightness Control/Led_BC.h"
+#include "WDT Test/WDT_Test.h"
 
 #endif /* APPLICATION_MAIN_H_ */

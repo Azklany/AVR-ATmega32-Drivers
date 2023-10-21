@@ -6,12 +6,8 @@
  */
 
 #include "main.h"
-//#include <avr/interrupt.h>
-
 //volatile u16 x;
 //volatile u16 counter;
-
-//void LEDON();
 
 void main(void) {
 	u8 Loc_u8Return_Value = E_NOT_OK;
@@ -39,39 +35,60 @@ void main(void) {
 
 	///////////////////////////////////////////////////
 	//ADC
-
-//	APP_PotTest_PotTestInit();
-//	APP_PotTest_PotTestAPP();
+	APP_PotTest_PotTestInit();
+	APP_PotTest_PotTestAPP();
 
 	//////////////////////////////////////////////////
+	// Timer 0
 //	  Timer Normal
 //	APP_Timer0_NMTest_u8NMTestInit();
 //	APP_Timer0_NMTest_u8NMTestAPP();
+
+	//Led Blink
+//	APP_Timer0_u8LedBlinkInit();
+//	APP_Timer0_u8LedBlinkAPP();
 
 	//	  Timer CTC
 //	APP_Timer0_CTCTest_u8CTCTestInit();
 //	APP_Timer0_CTCTest_u8CTCTestAPP();
 
-	// Fast
-	APP_Timer0_u8LedBCInit();
-	APP_Timer0_u8LedBCAPP();
-//	TCCR0 = 0b01001011;
-//	TIMSK = 0b00000010;
-//	MCAL_Interrupt_u8SetRegisterPin(SREG, 7, 1);
-//	HAL_LED_u8LedInit(3, 3);
-//	OCR0 = 199;
-//	TCCR0 = 0b00001011;
+	// Led Brightness Control
+
+//	APP_Timer0_u8LedBCInit();
+//	APP_Timer0_u8LedBCAPP();
+
+	// Phase pwm
+
+	//Protues
+//	MCAL_Timer0_Init(PWM_Mode,Prescaller_64,Non_Inverted);
+//	MCAL_Timer0_SetCompareValue(99);
+//	SET_BIT(DDRB,3);
+//	while(1);
+////////////////////////////////////////////////////////////////////////
+	//     Timer 1
+	//Servo Motor
+//	TCCR1A = 0b10000010;
+//	TCCR1B = 0b00011010;
+//	ICR1 = 39999;
+//	OCR1A = 1999;
+//	SET_BIT(DDRD, 5);
 //	while (1) {
-//		if (counter == 1250) {
-//			HAL_LED_u8LedMode(3, 3, 2);
-//			counter = 0;
-//		}
+//		OCR1A = 1999;
+//		_delay_ms(1000);
+//		OCR1A = 2999;
+//		_delay_ms(1000);
+//		OCR1A = 3999;
+//		_delay_ms(1000);
+//		OCR1A = 2999;
+//		_delay_ms(1000);
 //	}
 
-//////////////////////////////////////////////
-	//Led Blink
-//	APP_Timer0_u8LedBlinkInit();
-//	APP_Timer0_u8LedBlinkAPP();
+	////////////////////////////////////////
+	// WDT
+//	APP_WDTTest_WDTTestInit();
+//	APP_WDTTest_WDTTestAPP();
+
+	//////////////////////////////////////////////
 	///////////////////////////////////
 //		if (Loc_u8Return_Value == E_NOT_OK) {
 //			HAL_Buzzer_u8BuzzerInit(PortA, 3);

@@ -11,11 +11,11 @@ extern 	u16 Counter;
 
 STD_Type APP_Timer0_CTCTest_u8CTCTestInit() {
 	HAL_LED_u8LedInit(2,2);
-	MCAL_Timer0_Init(CTC_Mode,Prescaller_64,Disconnected);
+	MCAL_Timer0_Init(CTC_Mode,Prescaller_1024,Disconnected);
 }
 
 STD_Type APP_Timer0_CTCTest_u8CTCTestAPP() {
-	MCAL_Timer0_Delayms_CTCMode(1000,200);
+	MCAL_Timer0_Delayms_CTCMode(5000);
 	MCAL_Timer0_CallBack(CTCCounterUP);
 	while(1){
 		if (Loc_u8CTCcounter == Counter) {

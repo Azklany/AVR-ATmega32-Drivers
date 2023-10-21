@@ -45,6 +45,10 @@
 #define TCCR0 (*(volatile u8*)0x53)
 #define TCNT0 (*(volatile u8*)0x52)
 
+//Timer1
+
+//WDT
+#define WDTCR (*(volatile u8*)0x41)
 
 //#define GIE (*(volatile u8*)0x5f)
 

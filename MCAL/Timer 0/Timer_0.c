@@ -5,7 +5,7 @@
  *      Author: Mohamed
  */
 
-#include "Timer_0.h"
+#include "../Timer 0/Timer_0.h"
 
 void (*Gptr3)(void)= '\0' ;
 f32 Glob_TickTime;
@@ -82,18 +82,20 @@ void MCAL_Timer0_Init(u8 Loc_u8Mode, u8 Loc_u8Prescaller,u8 Loc_u8OC0Mode) {
 	if (Loc_u8OC0Mode == Disconnected) {
 			CLR_BIT(TCCR0, 4);
 			CLR_BIT(TCCR0, 5);
-			SET_BIT(DDRB, 3);
 		} else if (Loc_u8OC0Mode == Reserved) {
 			SET_BIT(TCCR0, 4);
 			CLR_BIT(TCCR0, 5);
-			SET_BIT(DDRB, 3);
+			//PWM, Fast PWM
 		} else if (Loc_u8OC0Mode == Non_Inverted) {
 			CLR_BIT(TCCR0, 4);
 			SET_BIT(TCCR0, 5);
+			// OC0
 			SET_BIT(DDRB, 3);
+			//PWM, Fast PWM
 		} else if (Loc_u8OC0Mode == Inverted) {
 			SET_BIT(TCCR0, 4);
 			SET_BIT(TCCR0, 5);
+			// OC0
 			SET_BIT(DDRB, 3);
 		}
 }
@@ -130,11 +132,11 @@ void MCAL_Timer0_Delayms_NormalMode(u32 Loc_u32MilliSeconds) {
 		//NOTHING
 	}
 }
-void MCAL_Timer0_Delayms_CTCMode(u32 Loc_u32MilliSeconds,u8 Loc_u8StartValue) {
+void MCAL_Timer0_Delayms_CTCMode(u32 Loc_u32MilliSeconds) {
 	u8 LOC_u8ReturnValue = E_NOT_OK;
 	f32 N = 0;
-	MCAL_Timer0_SetCompareValue(Loc_u8StartValue);
-	N = ((Loc_u8StartValue + 1) * Glob_TickTime);
+	MCAL_Timer0_SetCompareValue(CompareStartValue);
+	N = ((CompareStartValue + 1) * Glob_TickTime);
 	Counter = ((Loc_u32MilliSeconds/1000.0) / N);
 
 	LOC_u8ReturnValue = E_OK;

@@ -10,7 +10,7 @@
 
 #include "../../HAL/LED/LED.h"
 #include "../../HAL/Seven Segment/Seven_Segment.h"
-#include "../../MCAL/Timer_0/Timer_0.h"
+#include "../../MCAL/Timer 0/Timer_0.h"
 
 
 STD_Type APP_Timer0_u8LedBlinkInit();

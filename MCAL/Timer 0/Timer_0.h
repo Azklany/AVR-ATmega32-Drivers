@@ -8,8 +8,12 @@
 #ifndef MCAL_TIMER_0_TIMER_0_H_
 #define MCAL_TIMER_0_TIMER_0_H_
 
-#include "../Interrupt/Interrupt.h"
+#include "../../Commons/MCU.h"
+#include "../../Commons/Macros.h"
+#include "../../Commons/STD_Types.h"
 
+#define ISR( vectNum ) void vectNum (void)__attribute__((signal));\
+										void vectNum (void)
 #define TIMER0_OVF_vect __vector_11
 #define TIMER0_COMP_vect __vector_10
 
@@ -22,6 +26,8 @@ enum {
 #define Prescaller64_Value 64
 #define Prescaller256_Value 256
 #define Prescaller1024_Value 1024
+
+#define CompareStartValue 199
 
 enum {
 	NoPrescaller,
@@ -43,7 +49,7 @@ void MCAL_Timer0_DisableNormalMode();
 void MCAL_Timer0_EnableCTCMode();
 void MCAL_Timer0_DisableCTCMode();
 void MCAL_Timer0_Delayms_NormalMode(u32);
-void MCAL_Timer0_Delayms_CTCMode(u32,u8);
+void MCAL_Timer0_Delayms_CTCMode(u32);
 
 void MCAL_Timer0_CallBack(void (*ptr)(void));
 

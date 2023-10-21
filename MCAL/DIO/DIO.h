@@ -10,8 +10,10 @@
 
 #include "../../Commons/MCU.h"
 #include "../../Commons/Macros.h"
+#include "../../Commons/STD_Types.h"
+
 //////////
-#include <avr\io.h>
+//#include <avr\io.h>
 #include <util\delay.h>
 ////////
 #define PORT_INPUT 0x00
