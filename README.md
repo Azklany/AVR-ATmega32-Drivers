@@ -18,7 +18,9 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
 - MCAL
   - DIO
   - ADC
+  - WDT
   - Timer0
+  - Timer1
   - Interrupt
 
 ## Common Files
