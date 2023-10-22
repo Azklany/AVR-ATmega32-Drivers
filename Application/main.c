@@ -29,18 +29,18 @@ void main(void) {
 //	}
 	//////////////////////////////////////////////////
 
-	//          KeyPad
+	//                    KeyPad
 //	APP_Calculator_u8CalculatorInit();
 //	APP_Calculator_u8CalculatorAPP();
 
 	///////////////////////////////////////////////////
-	//ADC
-	APP_PotTest_PotTestInit();
-	APP_PotTest_PotTestAPP();
+	//                      ADC
+//	APP_PotTest_PotTestInit();
+//	APP_PotTest_PotTestAPP();
 
 	//////////////////////////////////////////////////
-	// Timer 0
-//	  Timer Normal
+	//                    Timer 0
+//	         Timer Normal
 //	APP_Timer0_NMTest_u8NMTestInit();
 //	APP_Timer0_NMTest_u8NMTestAPP();
 
@@ -48,7 +48,7 @@ void main(void) {
 //	APP_Timer0_u8LedBlinkInit();
 //	APP_Timer0_u8LedBlinkAPP();
 
-	//	  Timer CTC
+	//	       Timer CTC
 //	APP_Timer0_CTCTest_u8CTCTestInit();
 //	APP_Timer0_CTCTest_u8CTCTestAPP();
 
@@ -57,7 +57,7 @@ void main(void) {
 //	APP_Timer0_u8LedBCInit();
 //	APP_Timer0_u8LedBCAPP();
 
-	// Phase pwm
+	//         Phase pwm
 
 	//Protues
 //	MCAL_Timer0_Init(PWM_Mode,Prescaller_64,Non_Inverted);
@@ -65,8 +65,9 @@ void main(void) {
 //	SET_BIT(DDRB,3);
 //	while(1);
 ////////////////////////////////////////////////////////////////////////
-	//     Timer 1
-	//Servo Motor
+
+	//                     Timer 1
+	//     Servo Motor
 //	TCCR1A = 0b10000010;
 //	TCCR1B = 0b00011010;
 //	ICR1 = 39999;
@@ -84,11 +85,19 @@ void main(void) {
 //	}
 
 	////////////////////////////////////////
-	// WDT
+
+	//                   WDT
 //	APP_WDTTest_WDTTestInit();
 //	APP_WDTTest_WDTTestAPP();
 
+	/////////////////////////////////////////////
+
+	//                   UART
+	APP_UartTest_UartTestInit();
+	APP_UartTest_UartTestAPP();
+
 	//////////////////////////////////////////////
+
 	///////////////////////////////////
 //		if (Loc_u8Return_Value == E_NOT_OK) {
 //			HAL_Buzzer_u8BuzzerInit(PortA, 3);
@@ -97,15 +106,4 @@ void main(void) {
 //	}
 }
 
-//ISR(ADC_vect) {
-////	u32 y = (ADCH << 2) | (ADCL >> 6);
-//	 x = (((u32)ADC*5000) / 1024);
-//
-//}
-//ISR(TIMER0_OVF_vect) {
-//	counter++;
-//}
-//ISR(TIMER0_COMP_vect) {
-//	counter++;
-//}
 
