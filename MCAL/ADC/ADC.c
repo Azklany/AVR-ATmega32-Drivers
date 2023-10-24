@@ -7,7 +7,7 @@
 
 #include "ADC.h"
 
-void (*Gptr2)(void)= '\0' ;
+void (*Gptr_ADC)(void)= '\0' ;
 
 STD_Type MCAL_ADC_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
 	if (Loc_u8PortValue == PORT_OUTPUT) {
@@ -73,7 +73,7 @@ void MCAL_ADC_AdcInit(u8 Loc_u8Position) {
 	MCAL_ADC_u8SetRegisterPin(Sfior, 7, Pin_Low);
 	MCAL_ADC_u8SetRegisterPin(Sfior, 6, Pin_Low);
 	MCAL_ADC_u8SetRegisterPin(Sfior, 5, Pin_Low);
-	MCAL_Interrupt_u8SetRegisterPin(SREG,7,Pin_High);
+	MCAL_Interrupt_u8SetRegisterPin(SREG, 7, Pin_High);
 	if (Loc_u8Position == Adc_0) {
 		MCAL_ADC_u8SetRegister(Admux, ADUMX_Value_Adc0);
 	} else if (Loc_u8Position == Adc_1) {
@@ -90,17 +90,16 @@ void MCAL_ADC_AdcInit(u8 Loc_u8Position) {
 		MCAL_ADC_u8SetRegister(Admux, ADUMX_Value_Adc6);
 	} else if (Loc_u8Position == Adc_7) {
 		MCAL_ADC_u8SetRegister(Admux, ADUMX_Value_Adc7);
-	}
-	else {
+	} else {
 		//Do Nothing
 	}
 }
 
 void MCAL_ADC_AdcStartConversion(u8 Loc_u8Value) {
 	if (Loc_u8Value == Enable) {
-		MCAL_ADC_u8SetRegisterPin(Adcsra,6, Enable);
+		MCAL_ADC_u8SetRegisterPin(Adcsra, 6, Enable);
 	} else if (Loc_u8Value == Disable) {
-		MCAL_ADC_u8SetRegisterPin(Adcsra,6, Disable);
+		MCAL_ADC_u8SetRegisterPin(Adcsra, 6, Disable);
 	} else {
 		//NOTHING
 	}
@@ -108,16 +107,16 @@ void MCAL_ADC_AdcStartConversion(u8 Loc_u8Value) {
 
 u8 MCAL_ADC_u8AdcSetValue(u16 *Loc_u16Value) {
 	u8 LOC_u8ReturnValue = E_NOT_OK;
-	*Loc_u16Value = (((u32)ADC * 5000 ) / 1024);
+	*Loc_u16Value = (((u32) ADC * 5000) / 1024);
 	return LOC_u8ReturnValue;
 }
 
 void MCAL_ADC_EXIT_CallBack(void (*ptr)(void)) {
 	if (ptr != '\0')
-		Gptr2 = ptr;
+		Gptr_ADC = ptr;
 }
 
 ISR(ADC_vect) {
-	if (Gptr2 != '\0')
-		Gptr2();
+	if (Gptr_ADC != '\0')
+		Gptr_ADC();
 }

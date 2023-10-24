@@ -5,16 +5,16 @@
  *      Author: Mohamed
  */
 
-#include "Calculator.h"
+#include "../Calculator HW/Calculator.h"
 
-APP_Calculator_u8CalculatorInit() {
+APP_HWCalculator_u8CalculatorInit() {
 	HAL_LCD_u8LCDInit();
 	HAL_KeyPad_u8KeyPadInit();
 	HAL_LED_u8LedInit(3, 3);
 	HAL_Buzzer_u8BuzzerInit(0, 3);
 }
 
-APP_Calculator_u8CalculatorAPP() {
+APP_HWCalculator_u8CalculatorAPP() {
 	u8 Button = 11;
 	while (1) {
 		HAL_KeyPad_u8GetKeyPressed(&Button);

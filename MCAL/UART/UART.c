@@ -35,6 +35,11 @@ void MCAL_UART_UARTTransmit(u8 Loc_u8data) {
 
 	/* Put data into buffer, sends the data */
 	UDR = Loc_u8data;
+
+	/* Wait for data to be transmited */
+	while (GET_BIT(UCSRA,TXC_PIN)==0);
+	SET_BIT(UCSRA,TXC_PIN);
+
 }
 
 void MCAL_UART_UARTReceive(u8* Loc_u8data) {

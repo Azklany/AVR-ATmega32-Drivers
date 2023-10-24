@@ -15,7 +15,7 @@ STD_Type APP_InterruptTest_u8InterruptTestInit() {
 
 
 STD_Type APP_InterruptTest_u8InterruptTestAPP() {
-	MCAL_Interrupt_EXIT_CallBack(LEDON);
+	MCAL_Interrupt_EXIT_CallBack_0(LEDON);
 }
 
 

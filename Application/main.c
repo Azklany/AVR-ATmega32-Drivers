@@ -30,8 +30,8 @@ void main(void) {
 	//////////////////////////////////////////////////
 
 	//                    KeyPad
-//	APP_Calculator_u8CalculatorInit();
-//	APP_Calculator_u8CalculatorAPP();
+//	APP_HWCalculator_u8CalculatorInit();
+//	APP_HWCalculator_u8CalculatorAPP();
 
 	///////////////////////////////////////////////////
 	//                      ADC

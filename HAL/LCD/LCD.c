@@ -18,6 +18,8 @@ STD_Type HAL_LCD_u8LCDInit() {
 	MCAL_DIO_u8SetPinDirection(RW_Port, RW_Pin, Pin_High);
 	MCAL_DIO_u8SetPinDirection(Enable_PORT, Enable_PIN, Pin_High);
 	_delay_ms(2);
+	HAL_LCD_u8SendCommands(Reset);
+	_delay_ms(2);
 	HAL_LCD_u8SendCommands(Function_Set);
 	_delay_ms(2);
 	HAL_LCD_u8SendCommands(Display_Mode);

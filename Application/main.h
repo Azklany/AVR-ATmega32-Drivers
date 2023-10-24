@@ -8,7 +8,6 @@
 #ifndef APPLICATION_MAIN_H_
 #define APPLICATION_MAIN_H_
 
-#include "Calculator/Calculator.h"
 #include "Custom Characters/Custom_Char.h"
 #include "From 0 to 99 Counter/From_0_To_99.h"
 #include "Interrupt Test/Interrupt_Test.h"
@@ -17,6 +16,7 @@
 #include "Ping Pong/Ping_Pong.h"
 #include "Traffic Light/Traffic_Light.h"
 #include "ADC Test/Pot_Test.h"
+#include "Calculator HW/Calculator.h"
 #include "Timer0 NormalMode Test/T0_NM_Test.h"
 #include "Timer0 CTCMode Test/T0_CTC_Test.h"
 #include "LED BLink by Timer/Led_Blink.h"

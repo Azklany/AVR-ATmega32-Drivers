@@ -35,8 +35,9 @@ APP_PotTest_PotTestAPP() {
 		}
 //		itoa(x, str, 10);
 		HAL_LCD_u8Clear();
-		HAL_LCD_u8SendString("POT Value : ");
+		HAL_LCD_u8SendString("Value : ");
 		HAL_LCD_u8SendNumber(POT_Value);
+		HAL_LCD_u8SendString(" mV");
 		_delay_ms(500);
 	}
 
