@@ -7,6 +7,7 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
 - Application
   - App
   - main
+- FreeRTOS 
 - HAL
   - LED
   - LCD
@@ -19,6 +20,7 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
   - DIO
   - ADC
   - WDT
+  - SPI
   - UART
   - Timer0
   - Timer1
