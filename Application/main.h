@@ -30,5 +30,7 @@
 //#include "SPI Slave Project/SPI_Slave.h"
 #include "FreeRTOS Test_One/FreeRTOS_T1.h"
 #include "FreeRTOS Test_Two/FreeRTOS_T2.h"
+#include "TWI Master Project/TWI_Master.h"
+#include "TWI Slave Project/TWI_Slave.h"
 
 #endif /* APPLICATION_MAIN_H_ */

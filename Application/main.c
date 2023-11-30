@@ -113,14 +113,22 @@ void main(void) {
 //	APP_SPI_Slave_SlaveInit();
 //	APP_SPI_Slave_SlaveApp();
 	//////////////////////////////////////////////
+	//              TWI
+	// TWI Master
+//	APP_SPI_Master_MasterInit();
+//	APP_SPI_Master_MasterAPP();
+	// TWI Slave
+	APP_SPI_Slave_MasterInit();
+	APP_SPI_Slave_MasterAPP();
+	//////////////////////////////////////////////
 //	              FreeRTOS
 	//Test 1
 //	APP_FreeRTOS_T1_T1Init();
 //	APP_FreeRTOS_T1_T1APP();
 
 	//Test 2
-	APP_FreeRTOS_T2_T2Init();
-	APP_FreeRTOS_T2_T2APP();
+//	APP_FreeRTOS_T2_T2Init();
+//	APP_FreeRTOS_T2_T2APP();
 
 	///////////////////////////////////
 //		if (Loc_u8Return_Value == E_NOT_OK) {

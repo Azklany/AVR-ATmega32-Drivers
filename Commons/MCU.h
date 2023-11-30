@@ -10,6 +10,7 @@
 
 #include "STD_Types.h"
 
+//DIO
 #define DDRA (*(volatile u8*)0x3A)
 #define DDRB (*(volatile u8*)0x37)
 #define DDRC (*(volatile u8*)0x34)
@@ -62,6 +63,13 @@
 #define SPCR (*(volatile u8*)0x2D)
 #define SPSR (*(volatile u8*)0x2E)
 #define SPDR (*(volatile u8*)0x2F)
+
+//TWI
+#define TWCR (*(volatile u8*)0x56)
+#define TWDR (*(volatile u8*)0x23)
+#define TWAR (*(volatile u8*)0x22)
+#define TWBR (*(volatile u8*)0x20)
+
 
 //#define GIE (*(volatile u8*)0x5f)
 
