@@ -11,7 +11,7 @@ void (*Gptr0)(void)= '\0' ;
 void (*Gptr1)(void)= '\0' ;
 void (*Gptr2)(void)= '\0' ;
 
-STD_Type MCAL_Interrupt_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
+void MCAL_Interrupt_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
 	if (Loc_u8PortValue == PORT_OUTPUT) {
 		if (Loc_u8PortID == Sreg) {
 			SREG = PORT_OUTPUT;
@@ -49,7 +49,7 @@ STD_Type MCAL_Interrupt_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
 	}
 }
 
-STD_Type MCAL_Interrupt_u8SetRegisterPin(u8 Loc_u8PortID, u8 Loc_u8PinID,
+void MCAL_Interrupt_u8SetRegisterPin(u8 Loc_u8PortID, u8 Loc_u8PinID,
 		u8 Loc_u8PinValue) {
 	if (Loc_u8PinValue == Pin_High) {
 		if (Loc_u8PortID == Sreg) {

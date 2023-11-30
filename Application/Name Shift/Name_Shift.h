@@ -11,7 +11,7 @@
 #include "../../HAL/LCD/LCD.h"
 
 
-STD_Type APP_NameShift_u8NameShiftInit();
-STD_Type APP_NameShift_u8NameShiftAPP();
+void APP_NameShift_u8NameShiftInit();
+void APP_NameShift_u8NameShiftAPP();
 
 #endif /* APPLICATION_NAME_SHIFT_NAME_SHIFT_H_ */

@@ -50,7 +50,7 @@
 //WDT
 #define WDTCR (*(volatile u8*)0x41)
 
-//uart
+//UART
 #define UCSRA (*(volatile u8*)0x2B)
 #define UCSRB (*(volatile u8*)0x2A)
 #define UCSRC (*(volatile u8*)0x40)
@@ -58,8 +58,11 @@
 #define UBRRL (*(volatile u8*)0x29)
 #define UDR (*(volatile u8*)0x2C)
 
+//SPI
+#define SPCR (*(volatile u8*)0x2D)
+#define SPSR (*(volatile u8*)0x2E)
+#define SPDR (*(volatile u8*)0x2F)
 
 //#define GIE (*(volatile u8*)0x5f)
-
 
 #endif /* COMMONS_MCU_H_ */

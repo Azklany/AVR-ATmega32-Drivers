@@ -14,7 +14,7 @@
 #include "../../HAL/LCD/LCD.h"
 #include "../../HAL/LED/LED.h"
 
-APP_PotTest_PotTestInit();
-APP_PotTest_PotTestAPP();
+void APP_PotTest_PotTestInit();
+void APP_PotTest_PotTestAPP();
 
 #endif /* APPLICATION_ADC_TEST_POT_TEST_H_ */

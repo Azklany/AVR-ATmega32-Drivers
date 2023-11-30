@@ -19,7 +19,7 @@
 #define Rows_Input PullUp
 #define Colums_Output High
 
-STD_Type HAL_KeyPad_u8KeyPadInit();
-STD_Type HAL_KeyPad_u8GetKeyPressed();
+void HAL_KeyPad_u8KeyPadInit();
+void HAL_KeyPad_u8GetKeyPressed();
 
 #endif /* HAL_KEYPAD_KEYPAD_H_ */

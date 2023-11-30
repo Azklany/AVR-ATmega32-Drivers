@@ -7,9 +7,9 @@
 
 #include "LCD.h"
 
-static u32 Counter = 0;
+//static u32 Counter = 0;
 
-STD_Type HAL_LCD_u8LCDInit() {
+void HAL_LCD_u8LCDInit() {
 	MCAL_DIO_u8SetPinDirection(LCD_D_PORT, LCD_D7_PIN, Pin_High);
 	MCAL_DIO_u8SetPinDirection(LCD_D_PORT, LCD_D6_PIN, Pin_High);
 	MCAL_DIO_u8SetPinDirection(LCD_D_PORT, LCD_D5_PIN, Pin_High);
@@ -29,7 +29,7 @@ STD_Type HAL_LCD_u8LCDInit() {
 	HAL_LCD_u8SendCommands(Entry_Mode);
 }
 
-STD_Type HAL_LCD_u8SendCommands(u8 Loc_u8LCD_Command) {
+void HAL_LCD_u8SendCommands(u8 Loc_u8LCD_Command) {
 	MCAL_DIO_u8SetPinValue(RS_Port, RS_Pin, RS_Low);
 	MCAL_DIO_u8SetPinValue(RW_Port, RW_Pin, RW_Low);
 	MCAL_DIO_u8SetPortValue(LCD_D_PORT, Loc_u8LCD_Command);
@@ -42,7 +42,7 @@ STD_Type HAL_LCD_u8SendCommands(u8 Loc_u8LCD_Command) {
 	MCAL_DIO_u8SetPinValue(Enable_PORT, Enable_PIN, Enable_Low);
 }
 
-STD_Type HAL_LCD_u8SendChar(u8 Loc_u8LCD_Char) {
+void HAL_LCD_u8SendChar(u8 Loc_u8LCD_Char) {
 	MCAL_DIO_u8SetPinValue(RS_Port, RS_Pin, RS_High);
 	MCAL_DIO_u8SetPinValue(RW_Port, RW_Pin, RW_Low);
 	MCAL_DIO_u8SetPortValue(LCD_D_PORT, Loc_u8LCD_Char);
@@ -55,19 +55,19 @@ STD_Type HAL_LCD_u8SendChar(u8 Loc_u8LCD_Char) {
 	MCAL_DIO_u8SetPinValue(Enable_PORT, Enable_PIN, Enable_Low);
 }
 
-STD_Type HAL_LCD_u8SendString(u8* Loc_u8LCD_String) {
+void HAL_LCD_u8SendString(u8* Loc_u8LCD_String) {
 	for (u32 count = 0; Loc_u8LCD_String[count] != '\0'; count++) {
 		HAL_LCD_u8SendChar(Loc_u8LCD_String[count]);
 	}
 }
 
-STD_Type HAL_LCD_u8SendNumber(u16 Loc_u8LCD_Number) {
+void HAL_LCD_u8SendNumber(u16 Loc_u8LCD_Number) {
 	u8 str[10];
 	itoa(Loc_u8LCD_Number, str, 10);
 	HAL_LCD_u8SendString(str);
 }
 
-STD_Type HAL_LCD_u8GoTo(u8 Loc_u8TypeOfShift, u8 Loc_u8NumOfShift) {
+void HAL_LCD_u8GoTo(u8 Loc_u8TypeOfShift, u8 Loc_u8NumOfShift) {
 	if (Loc_u8TypeOfShift == Right_Shift) {
 		for (u32 count = 0; count < Loc_u8NumOfShift; count++) {
 			_delay_ms(2);
@@ -87,12 +87,12 @@ STD_Type HAL_LCD_u8GoTo(u8 Loc_u8TypeOfShift, u8 Loc_u8NumOfShift) {
 	}
 }
 
-STD_Type HAL_LCD_u8Clear() {
+void HAL_LCD_u8Clear() {
 	_delay_ms(2);
 	HAL_LCD_u8SendCommands(Display_Clear);
 }
 
-STD_Type HAL_LCD_u8CustomChar(u8 Loc_u8Location, u8* Loc_u8msg) {
+void HAL_LCD_u8CustomChar(u8 Loc_u8Location, u8* Loc_u8msg) {
 	if (Loc_u8Location < 8) {
 		HAL_LCD_u8SendCommands(0x40 + (Loc_u8Location*8));
 		for( u8 count = 0; count < 8; count++)

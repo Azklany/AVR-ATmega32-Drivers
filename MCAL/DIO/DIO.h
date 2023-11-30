@@ -24,6 +24,15 @@
 
 #define Num_Of_Pins 7
 
+#define Pin0 0
+#define Pin1 1
+#define Pin2 2
+#define Pin3 3
+#define Pin4 4
+#define Pin5 5
+#define Pin6 6
+#define Pin7 7
+
 enum {
 	PortA, PortB, PortC, PortD
 };

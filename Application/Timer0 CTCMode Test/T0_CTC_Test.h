@@ -11,8 +11,8 @@
 #include "../../HAL/LED/LED.h"
 #include "../../MCAL/Timer 0/Timer_0.h"
 
-STD_Type APP_Timer0_CTCTest_u8CTCTestInit();
-STD_Type APP_Timer0_CTCTest_u8CTCTestAPP();
+void APP_Timer0_CTCTest_u8CTCTestInit();
+void APP_Timer0_CTCTest_u8CTCTestAPP();
 void CTCCounterUP();
 
 #endif /* APPLICATION_TIMER0_CTCMODE_TEST_T0_CTC_TEST_H_ */

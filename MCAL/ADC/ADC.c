@@ -9,7 +9,7 @@
 
 void (*Gptr_ADC)(void)= '\0' ;
 
-STD_Type MCAL_ADC_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
+void MCAL_ADC_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
 	if (Loc_u8PortValue == PORT_OUTPUT) {
 		if (Loc_u8PortID == Admux) {
 			ADMUX = PORT_OUTPUT;
@@ -41,7 +41,7 @@ STD_Type MCAL_ADC_u8SetRegister(u8 Loc_u8PortID, u8 Loc_u8PortValue) {
 	}
 }
 
-STD_Type MCAL_ADC_u8SetRegisterPin(u8 Loc_u8PortID, u8 Loc_u8PinID,
+void MCAL_ADC_u8SetRegisterPin(u8 Loc_u8PortID, u8 Loc_u8PinID,
 		u8 Loc_u8PinValue) {
 	if (Loc_u8PinValue == Pin_High) {
 		if (Loc_u8PortID == Admux) {

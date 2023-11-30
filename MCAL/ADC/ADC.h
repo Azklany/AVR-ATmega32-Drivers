@@ -50,8 +50,8 @@ enum {
 #define ADUMX_Value_Adc7 0b01000111
 #define ADCSRA_VALUE 0b10101111
 
-STD_Type MCAL_ADC_u8SetRegister(u8, u8);
-STD_Type MCAL_ADC_u8SetRegisterPin(u8, u8, u8);
+void MCAL_ADC_u8SetRegister(u8, u8);
+void MCAL_ADC_u8SetRegisterPin(u8, u8, u8);
 void MCAL_ADC_AdcInit(u8);
 void MCAL_ADC_AdcStartConversion(u8);
 void MCAL_ADC_EXIT_CallBack(void (*ptr)(void));

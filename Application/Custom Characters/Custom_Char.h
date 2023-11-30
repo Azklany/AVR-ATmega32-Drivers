@@ -11,7 +11,7 @@
 #include "../../HAL/LCD/LCD.h"
 
 
-STD_Type APP_CustomChar_u8CustomCharInit();
-STD_Type APP_CustomChar_u8CustomCharAPP();
+void APP_CustomChar_u8CustomCharInit();
+void APP_CustomChar_u8CustomCharAPP();
 
 #endif /* APPLICATION_NAME_SHIFT_H_ */

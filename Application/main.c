@@ -6,12 +6,20 @@
  */
 
 #include "main.h"
+//#include <avr/io.h>
+//#include <util/delay.h>
 //volatile u16 x;
 //volatile u16 counter;
 
 void main(void) {
-	u8 Loc_u8Return_Value = E_NOT_OK;
+//	u8 Loc_u8Return_Value = E_NOT_OK;
 
+///////////////////////////////////////////////////
+//              One Minute by LCD
+//	APP_0_60_7segment_u8Init();
+//	while (1) {
+//		APP_0_60_7segment_u8APP();
+//	}
 	///////////////////////////////////////////////////
 	//                    LCD
 //	APP_NameShift_u8NameShiftInit();
@@ -53,7 +61,6 @@ void main(void) {
 //	APP_Timer0_CTCTest_u8CTCTestAPP();
 
 	// Led Brightness Control
-
 //	APP_Timer0_u8LedBCInit();
 //	APP_Timer0_u8LedBCAPP();
 
@@ -93,10 +100,27 @@ void main(void) {
 	/////////////////////////////////////////////
 
 	//                   UART
-	APP_UartTest_UartTestInit();
-	APP_UartTest_UartTestAPP();
+//	APP_UartTest_UartTestInit();
+//	APP_UartTest_UartTestAPP();
 
 	//////////////////////////////////////////////
+	//               SPI
+	// SPI Master
+//	APP_SPI_Master_MasterInit();
+//	APP_SPI_Master_MasterApp();
+
+	// SPI Slave
+//	APP_SPI_Slave_SlaveInit();
+//	APP_SPI_Slave_SlaveApp();
+	//////////////////////////////////////////////
+//	              FreeRTOS
+	//Test 1
+//	APP_FreeRTOS_T1_T1Init();
+//	APP_FreeRTOS_T1_T1APP();
+
+	//Test 2
+	APP_FreeRTOS_T2_T2Init();
+	APP_FreeRTOS_T2_T2APP();
 
 	///////////////////////////////////
 //		if (Loc_u8Return_Value == E_NOT_OK) {
@@ -105,5 +129,4 @@ void main(void) {
 //		}
 //	}
 }
-
 

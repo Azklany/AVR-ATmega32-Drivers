@@ -13,8 +13,8 @@
 #include "../../MCAL/Timer 0/Timer_0.h"
 
 
-STD_Type APP_Timer0_u8LedBlinkInit();
-STD_Type APP_Timer0_u8LedBlinkAPP();
+void APP_Timer0_u8LedBlinkInit();
+void APP_Timer0_u8LedBlinkAPP();
 void BlinkCounterUP();
 
 #endif /* APPLICATION_LED_BLINK_BY_TIMER_LED_BLINK_H_ */

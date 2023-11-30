@@ -49,12 +49,12 @@ enum {
 	Left_Shift, Right_Shift, First_Line, Second_Line
 };
 
-STD_Type HAL_LCD_u8LCDInit();
-STD_Type HAL_LCD_u8SendCommands(u8);
-STD_Type HAL_LCD_u8SendChar(u8);
-STD_Type HAL_LCD_u8SendString(u8*);
-STD_Type HAL_LCD_u8Clear();
-STD_Type HAL_LCD_u8GoTo(u8, u8);
-STD_Type HAL_LCD_u8CustomChar(u8, u8*);
+void HAL_LCD_u8LCDInit();
+void HAL_LCD_u8SendCommands(u8);
+void HAL_LCD_u8SendChar(u8);
+void HAL_LCD_u8SendString(u8*);
+void HAL_LCD_u8Clear();
+void HAL_LCD_u8GoTo(u8, u8);
+void HAL_LCD_u8CustomChar(u8, u8*);
 
 #endif /* HAL_LCD_LCD_H_ */
