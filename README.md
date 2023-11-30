@@ -21,6 +21,7 @@ For `ATmega32 Datasheet` click [here](https://pdf1.alldatasheet.com/datasheet-pd
   - ADC
   - WDT
   - SPI
+  - TWI
   - UART
   - Timer0
   - Timer1
